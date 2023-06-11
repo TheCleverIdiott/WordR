@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>FlipAnalyse</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href= {{url_for('static',filename='css/bootstrap.css')}} />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href= {{url_for('static',filename='css/style.css')}} rel="stylesheet" />
+  <link href= {{url_for('static',filename='css/responsive.css')}} rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href="images/flipkart-favicon.ico">
+</head>
+
+<body>
+  <div class="hero_area sub_pages">
+    <!-- header section strats -->
+
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+             <img src="" alt="" /><span><!--{{url_for('static',filename="images/flipkart-favicon.ico")}} -->
+              Social Media
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/analysis"> Analysis </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/work"> How FlipAnalyse works</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- end header section -->
+
+  </div>
+
+  <!-- analysis section -->
+  <div class="container" style="margin-top: 20px;">
+    <div class="row">
+      <div class="card-group">
+        <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">Twitter Tweets Sentiment Analysis Count</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Histogram</h6>
+              <div id='chart1' class='chart1'></div>
+              <p class="card-text">Top 100 Tweets from Twitter with #Flipkart are scrapped and then a TensorFlow Recurrent Neural Network Model is used to count the sentiments of the tweets.</p>
+              
+            </div>
+          </div>
+      
+        <div class="card" >
+            <div class="card-body">
+              <h5 class="card-title">Twitter Tweets Sentiment Analysis Percentage</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Pie Chart</h6>
+              <div id='chart2' class='chart2'></div>
+              <p class="card-text">Top 100 Tweets from Twitter with #Flipkart are scrapped and then a TensorFlow Recurrent Neural Network Model is used to find percentage of the sentiments of the tweets.</p>
+              
+            </div>
+          </div>
+      </div>
+     
+    </div>
+
+    <div class="row">
+      <div class="card-group">
+
+      
+       
+          <div class="card" >
+              <div class="card-body">
+                <h5 class="card-title">Reddit Posts Sentiment Analysis Count</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Histogram</h6>
+                <div id='chart3' class='chart3'></div>
+                <p class="card-text">Top 50 Posts from Reddit with #Flipkart are scrapped and then a TensorFlow Recurrent Neural Network Model is used to count the sentiments of the posts.</p>
+                
+              </div>
+            </div>
+       
+       
+          <div class="card" >
+              <div class="card-body">
+                <h5 class="card-title">Reddit Posts Sentiment Analysis Percentage</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Pie Chart</h6>
+                <div id='chart4' class='chart4'></div>
+                <p class="card-text">Top 50 Posts from Reddit with #Flipkart are scrapped and then a TensorFlow Recurrent Neural Network Model is used to find percentage of the sentiments of the posts.</p>
+                
+              </div>
+            </div>
+      </div>
+       
+      </div>
+      <div class="row">
+        <div class="card-group">
+          <div class="card" >
+              <div class="card-body">
+                <h5 class="card-title">LinkedIn Content Sentiment Analysis Count</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Histogram</h6>
+                <div id='chart5' class='chart5'></div>
+                <p class="card-text">Top 100 Contents from LinkedIn with #Flipkart are scrapped and then a TensorFlow Recurrent Neural Network Model is used to count the sentiments of the contents.</p>
+                
+              </div>
+            </div>
+        
+          <div class="card" >
+              <div class="card-body">
+                <h5 class="card-title">LinkedIn Content Sentiment Analysis Percentage</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Pie Chart</h6>
+                <div id='chart6' class='chart6'></div>
+                <p class="card-text">Top 100 Contents from LinkedIn with #Flipkart are scrapped and then a TensorFlow Recurrent Neural Network Model is used to find percentage of the sentiments of the contents.</p>
+                
+              </div>
+            </div>
+        </div>
+       
+      </div>
+  </div>
+  <!-- conclusion section -->
+
+ <section class="info_section layout_padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <h5>
+          Web Scraping
+        </h5>
+        <ul>
+          <li>
+            ParseHub
+          </li>
+          <li>
+            Apify
+          </li>
+          <li>
+            Social media
+            <ol>
+              <li>&#8226; Twitter</li>
+              <li>&#8226; Reddit</li>
+              <li>&#8226; LinkedIn</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>
+          Analysis and Prediction
+        </h5>
+        <ul>
+          <li>
+            Python
+            <ol>
+              <li>&#8226; NumPy</li>
+              <li>&#8226; Pandas</li>
+              <li>&#8226; Plotly</li>
+              <li>&#8226; Pickle</li>
+              <li>&#8226; NLTK</li>
+              <li>&#8226; TensorFlow</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>
+          Web Technologies
+        </h5>
+        <ul>
+          <li>
+            HTML
+          </li>
+          <li>
+            CSS
+          </li>
+          <li>
+            Bootstrap
+          </li>
+          <li>
+            Flask
+          </li>
+        </ul>
+      </div>
+      <div class="subscribe_container">
+        <div class="form_container">
+          <button type="submit">
+            View code
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<!-- end of conclusion section -->
+
+<!-- footer section -->
+
+<section class="container-fluid footer_section">
+  <p>
+    Project by
+    <a href="https://www.linkedin.com/in/arya-gupta2002/" target="_blank">Arya</a> & <a
+      href="https://www.linkedin.com/in/bhaswatiroy31/" target="_blank">Bhaswati</a>
+  </p>
+</section>
+
+<!-- end of footer section -->
+  <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+  <script type='text/javascript'>
+    var graphs1 = {{graphJSON1 | safe}};
+    Plotly.plot('chart1',graphs1,{});
+    var graphs2 = {{graphJSON2 | safe}};
+    Plotly.plot('chart2',graphs2,{});
+    var graphs3 = {{graphJSON3 | safe}};
+    Plotly.plot('chart3',graphs3,{});
+    var graphs4 = {{graphJSON4 | safe}};
+    Plotly.plot('chart4',graphs4,{});
+    var graphs5 = {{graphJSON5 | safe}};
+    Plotly.plot('chart5',graphs5,{});
+    var graphs6 = {{graphJSON6 | safe}};
+    Plotly.plot('chart6',graphs6,{});
+    
+  </script>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+</body>
+
+</html>

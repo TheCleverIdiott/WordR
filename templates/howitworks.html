@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>FlipAnalyse</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.3/assets/owl.carousel.min.css" />
+  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/bootstrap.css")}} />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet" />
+  <link href={{url_for('static',filename="css/style.css")}} rel="stylesheet" />
+  <link href={{url_for('static',filename="css/responsive.css")}} rel="stylesheet" />
+  <link rel="icon" type="image/x-icon" href={{url_for('static',filename="images/flipkart-favicon.ico")}}>
+</head>
+
+<body>
+  <div class="hero_area sub_pages">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+          <a class="navbar-brand" href="index.html">
+            <img src={{url_for('static',filename="images/flipkart-favicon.ico")}} alt="" /><span>
+              FlipAnalyse
+            </span>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/analysis"> Analysis </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/work"> How FlipAnalyse works</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+
+  </div>
+
+
+  <!-- how flipanalyse works section -->
+
+  <section class="fruit_section mt-5">
+    <div class="container">
+      <h2 class="custom_heading">How FlipAnalyse Works</h2>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Social Media
+            </h3>
+            <p class="mt-4 mb-5">
+              Social Media is very important to understand how customers perceive any brand.
+              Thus metadata including posts & tweets collected from various social media platforms like - LinkedIn,
+              Twitter, Reddit act as a great source of analyzing the sentiments of
+              customer satisfaction regarding Flipkart. Thus we have extracted top 100 tweets and posts from each of the
+              social media platforms to perform overall sentiment analysis of posts
+              regarding Flipkart, or tagged #Flipkart.
+            </p>
+            <div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src={{url_for('static',filename="images/social-media-description.jpg")}} alt="" class="" width="250px" />
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Top Products
+            </h3>
+            <p class="mt-4 mb-5">
+              Electronics play a major role in Flipkart's sales, and thus we have come up with a solution to analyze
+              these sales by
+              extracting top items under multiple product categories in the Electronics section including Laptops,
+              Monitors, Mobile Phones, Headphones etc.
+              FlipAnalyze will pave a way to create meaningful business decisions such as dictating brand deals and
+              organizing targeted sales related to certain products.
+            </p>
+            <div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src={{url_for('static',filename="images/top-products-description.svg")}} alt="" class="" width="250px" />
+          </div>
+        </div>
+      </div>
+      <div class="row layout_padding2-top layout_padding-bottom">
+        <div class="col-md-8">
+          <div class="fruit_detail-box">
+            <h3>
+              Big Billion Days Sale
+            </h3>
+            <p class="mt-4 mb-5">
+              Big Billion Days is the largest Ecommerce Sale organized by Flipkart.
+              Most Flipkart users aim to buy as many products as possible during this sale, thus making an analysis
+              of these products extremely vital in boosting Flipkart's sales and revenue. FlipAnalyse provides a
+              detailed
+              analysis of customer feedback and product details from the sale to display information about trending
+              items
+              and customer reviews.
+            </p>
+            <div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-flex justify-content-center align-items-center">
+          <div class="fruit_img-box d-flex justify-content-center align-items-center">
+            <img src={{url_for('static',filename="images/big-billion-days-sale-description.jpg")}} alt="" class="" width="250px" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end how flipanalyse works section -->
+
+
+  <!-- conclusion section -->
+
+  <section class="info_section layout_padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <h5>
+            Web Scraping
+          </h5>
+          <ul>
+            <li>
+              ParseHub
+            </li>
+            <li>
+              Apify
+            </li>
+            <li>
+              Social media
+              <ol>
+                <li>&#8226; Twitter</li>
+                <li>&#8226; Reddit</li>
+                <li>&#8226; LinkedIn</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Analysis and Prediction
+          </h5>
+          <ul>
+            <li>
+              Python
+              <ol>
+                <li>&#8226; NumPy</li>
+                <li>&#8226; Pandas</li>
+                <li>&#8226; Plotly</li>
+                <li>&#8226; Pickle</li>
+                <li>&#8226; NLTK</li>
+                <li>&#8226; TensorFlow</li>
+              </ol>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h5>
+            Web Technologies
+          </h5>
+          <ul>
+            <li>
+              HTML
+            </li>
+            <li>
+              CSS
+            </li>
+            <li>
+              Bootstrap
+            </li>
+            <li>
+              Flask
+            </li>
+          </ul>
+        </div>
+        <div class="subscribe_container">
+          <div class="form_container">
+            <button type="submit">
+              View code
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <!-- end of conclusion section -->
+
+  <!-- footer section -->
+
+  <section class="container-fluid footer_section">
+    <p>
+      Project by
+      <a href="https://www.linkedin.com/in/arya-gupta2002/" target="_blank">Arya</a> & <a
+        href="https://www.linkedin.com/in/bhaswatiroy31/" target="_blank">Bhaswati</a>
+    </p>
+  </section>
+
+  <!-- end of footer section -->
+
+  <script type="text/javascript" src={{url_for('static',filename="js/jquery-3.4.1.min.js")}}></script>
+  <script type="text/javascript" src={{url_for('static',filename="js/bootstrap.js")}}></script>
+</body>
+
+</html>
