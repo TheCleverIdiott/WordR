@@ -39,11 +39,11 @@ def cleantext(txt,sw,ps):
   lst4=[ps.stem(i) for i in lst3]
   return lst4
 
-###########################Section 1 ###############################
+#1st sec#
 @app.route("/social")
 def socialMedia():
     
-    #########################Section 1 plot 1
+    #sec1p1
     nltk.download('stopwords')
 
     sw=nltk.corpus.stopwords.words("english")
@@ -79,11 +79,11 @@ def socialMedia():
     plotdf1=pd.DataFrame({"Twitter Tweet Sentiments":finalsentiments1})
     plot1=px.histogram(plotdf1,x="Twitter Tweet Sentiments",title="")
     fig1 = plot1
-    #########################Section 1 plot 2
+    #pl2
     labels=["Negative","Neutral","Positive"]
     values=twittercounts
     fig2 =go.Figure(data=[go.Pie(labels=labels,values=values)])
-    #########################Section 1 plot 3
+  #p13
 
     df2=pd.read_csv("static/dataset/section1/reddit_posts.csv",encoding='unicode_escape')
     df2["Clean"]=df2["ï»¿Text"].apply(lambda x:cleantext(x,sw,ps))
@@ -114,12 +114,11 @@ def socialMedia():
     plot3=px.histogram(plotdf2,x="Reddit Post Sentiments",title="")
     fig3 = plot3
 
-    ######################################Section 1 plot 4
     labels=["Negative","Neutral","Positive"]
     values=redditcounts
     plot4=go.Figure(data=[go.Pie(labels=labels,values=values)])
     fig4 = plot4
-    ######################################Section 1 plot 5
+    
     df3=pd.read_csv("static/dataset/section1/linkedin_content.csv",encoding='unicode_escape')
 
     df3["Clean"]=df3["Text"].apply(lambda x:cleantext(x,sw,ps))
@@ -149,18 +148,13 @@ def socialMedia():
     plotdf3=pd.DataFrame({"LinkedIn Content Sentiments":finalsentiments3})
     plot5=px.histogram(plotdf3,x="LinkedIn Content Sentiments",title="")
     fig5 = plot5
-    ######################################Section 1 plot 6
+   #p16
     labels=["Negative","Neutral","Positive"]
     values=linkedincounts
     plot6=go.Figure(data=[go.Pie(labels=labels,values=values)])
     fig6 = plot6
-    # fig1.update_layout(
-   
-    # autosize=False,
-    # width=550,
-    # height=400,
-   
-    # )
+
+    
     graphJSON1 = json.dumps(fig1, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON2 = json.dumps(fig2, cls=plotly.utils.PlotlyJSONEncoder)
     graphJSON3 = json.dumps(fig3, cls=plotly.utils.PlotlyJSONEncoder)
@@ -171,7 +165,7 @@ def socialMedia():
     
     return render_template('socialMedia.html', graphJSON1=graphJSON1,graphJSON2=graphJSON2,graphJSON3=graphJSON3, graphJSON4  = graphJSON4,graphJSON5=graphJSON5,graphJSON6=graphJSON6)
 
-###########################Section 3 ###############################
+#s13
 @app.route("/sale")
 def dataSale():
     df1=pd.read_csv(r"static/dataset/section3/bbd_customer_data.csv")
@@ -267,7 +261,7 @@ def dataSale():
     return render_template('sales.html', graphJSON1=graphJSON1,graphJSON2=graphJSON2,graphJSON3=graphJSON3, graphJSON4  = graphJSON4,graphJSON5=graphJSON5,graphJSON6=graphJSON6)
 
 
-###########################Section 2 ###############################
+#s14
 @app.route("/topProrducts")
 def topProducts():
     topProducts=pd.read_csv(r"static/dataset/section2/flipkart_top_products.csv")
@@ -287,8 +281,6 @@ def topProducts():
     data = topProducts.filter(['name', 'product_link','Detail_1','Detail_2','Detail_3','Detail_4','image_link','price','Rating'])
 
     
-    # for ind in data.index:
-    #     print(data['name'][ind])
     return render_template('topProducts.html', data = data)
 
 if __name__ == "__main__":
